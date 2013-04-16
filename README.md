@@ -1,4 +1,4 @@
-h4h_restore
+Restore Donation Form
 ===========
 
-a donor form for Habitat for Humanity's Restore
+A donor form for Habitat for Humanity's ReStore
