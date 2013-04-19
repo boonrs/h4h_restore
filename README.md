@@ -7,6 +7,7 @@ A donor form for Habitat for Humanity's ReStore.
 ## Getting Started: an incomplete guide
 
 * Install git
+* Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * Install [Vagrant](http://www.vagrantup.com/)
 * clone the repository
 
