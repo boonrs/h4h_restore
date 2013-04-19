@@ -16,3 +16,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 2.13'
 end
+
+group :development do
+  gem 'librarian-chef'
+end
