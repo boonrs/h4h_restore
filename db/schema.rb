@@ -11,14 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420210429) do
+ActiveRecord::Schema.define(:version => 20130420230012) do
 
   create_table "donations", :force => true do |t|
     t.text     "description"
     t.integer  "poundage"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "donor_id"
+    t.integer  "coordinator_id"
   end
+
+  add_index "donations", ["coordinator_id"], :name => "index_donations_on_coordinator_id"
+  add_index "donations", ["donor_id"], :name => "index_donations_on_donor_id"
 
   create_table "donors", :force => true do |t|
     t.string   "name"

@@ -10,4 +10,9 @@ describe Donor do
       FactoryGirl.build(:donor, name: nil, company: "acme").should be_valid
     end
   end
+
+  context "associations" do
+    it { should have_many :donations }
+    it { should have_many :coordinations }
+  end
 end
