@@ -5,6 +5,7 @@ ruby "2.0.0"
 gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'jquery-rails'
+gem 'devise', '~> 2.2'
 
 group :assets do
   gem 'bootstrap-sass', '~> 2.3.1'

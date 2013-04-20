@@ -1,0 +1,5 @@
+<% messages.each do |key, message| %>
+  <%= content_tag :p, class: "alert alert-#{key}" do %>
+    <%= message %>
+  <% end %>
+<% end %>
