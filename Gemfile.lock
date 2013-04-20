@@ -104,6 +104,7 @@ GEM
     net-ssh-multi (1.1)
       net-ssh (>= 2.1.4)
       net-ssh-gateway (>= 0.99.0)
+    newrelic_rpm (3.6.0.83)
     ohai (6.16.0)
       ipaddress
       mixlib-cli
@@ -192,6 +193,7 @@ DEPENDENCIES
   factory_girl_rails
   jquery-rails
   librarian-chef
+  newrelic_rpm
   pg
   rails (= 3.2.13)
   rspec-rails (~> 2.13)
