@@ -3,5 +3,5 @@ H4hRestore::Application.routes.draw do
 
   resources :donations
 
-  root to: "donations#index"
+  root to: "home#index"
 end
