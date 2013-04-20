@@ -1,0 +1,85 @@
+
+/* UI Sprites */
+
+.h4hsprite {
+  background-image: url('sprite.png');
+	background-position: 0 0;
+}
+
+.h4hsprite.save {
+	width: 22px;
+	height: 23px;
+	background-position: -1px 0;
+}
+
+.h4sprite.trash {
+	width: 18px;
+	height: 23px;
+	background-position: -44px 0;
+}
+
+.h4sprite.graph {
+	width: 28px;
+	height: 22px;
+	background-position: -80px 0;
+}
+
+.h4sprite.email {
+	width: 23px;
+	height: 15px;
+	background-position: 0 -42px;
+}
+
+.h4sprite.printer {
+	width: 24px;
+	height: 20px;
+	background-position:  -41px -40px;
+}
+
+.h4sprite.profile {
+	width: 21px;
+	height: 18px;
+	background-position:  -85px -41px;
+}
+
+.h4sprite.attachment {
+	width: 19px;
+	height: 21px;
+	background-position:  0 -81px;
+}
+
+.h4sprite.calendar {
+	width: 23px;
+	height: 23px;
+	background-position:  -42px -79px;
+}
+
+.h4sprite.add {
+	width: 22px;
+	height: 22px;
+	background-position:  -79px -85px;
+}
+
+.h4sprite.downarrow {
+	width: 10px;
+	height: 7px;
+	background-position:  -4px -135px;
+}
+
+.h4sprite.edit {
+	width: 20px;
+	height: 21px;
+	background-position:  -45px -124px;
+}
+
+.h4sprite.settings {
+	width: 19px;
+	height: 20px;
+	background-position:  -90px -125px;
+}
+
+.h4sprite.help {
+	width: 21px;
+	height: 20px;
+	background-position:  0 -166px;
+}
