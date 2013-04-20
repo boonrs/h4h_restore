@@ -18,6 +18,7 @@ end
 
 group :production, :staging do
   gem 'pg'
+  gem 'unicorn'
 end
 
 group :development, :test do
