@@ -1,12 +1,30 @@
 
 /* UI Sprites */
 
-.h4hsprite {
-  background-image: url('sprite.png');
+/* EXAMPLE USAGE 
+
+	<div class="h4sprite save"></div>	
+	<div class="h4sprite trash"></div>
+	<div class="h4sprite graph"></div>
+	<div class="h4sprite email"></div>
+	<div class="h4sprite printer"></div>
+	<div class="h4sprite profile"></div>
+	<div class="h4sprite attachment"></div>
+	<div class="h4sprite calendar"></div>
+	<div class="h4sprite add"></div>
+	<div class="h4sprite downarrow"></div>
+	<div class="h4sprite edit"></div>
+	<div class="h4sprite settings"></div>
+	<div class="h4sprite help"></div>
+
+*/
+
+.h4sprite {
+	background-image: url('sprite.png');
 	background-position: 0 0;
 }
 
-.h4hsprite.save {
+.h4sprite.save {
 	width: 22px;
 	height: 23px;
 	background-position: -1px 0;
@@ -57,7 +75,7 @@
 .h4sprite.add {
 	width: 22px;
 	height: 22px;
-	background-position:  -79px -85px;
+	background-position:  -86px -80px;
 }
 
 .h4sprite.downarrow {
