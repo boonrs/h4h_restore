@@ -17,7 +17,7 @@ A donor form for Habitat for Humanity's ReStore.
 
         vagrant up
 
-* SSH to the VM
+* SSH to the VM (if using windows, use git bash)
 
         vagrant ssh
 
