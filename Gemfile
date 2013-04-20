@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 gem 'rails', '3.2.13'
-gem 'sqlite3'
 gem 'jquery-rails'
 gem 'devise', '~> 2.2'
 
@@ -17,6 +16,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.13'
+  gem 'sqlite3'
 end
 
 group :development do
