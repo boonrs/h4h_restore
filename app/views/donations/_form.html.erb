@@ -16,13 +16,14 @@
       <%= text_field_tag :donorname %>
     </div>
   </div>
-  <div class="control-group">
+  <div class="control-group ">
     <%= label_tag :date, "Date", :class => 'control-label' %>
     <div class="controls">
       <%= text_field_tag :date %>
+      <div class="h4sprite calendar"></div>
     </div>
   </div>
-  
+
   <div class="control-group">
     <%= f.label :poundage, "Est. Weight", :class => 'control-label' %>
     <div class="controls">
@@ -34,6 +35,25 @@
     <%= label_tag :value, "Est. Value", :class => 'control-label' %>
     <div class="controls">
       <%= number_field_tag :value %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= label_tag :coordinator, "Coordinator", :class => 'control-label' %>
+    <div class="controls">
+      <%= text_field_tag :coordinator %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label"></label>
+    <div class="controls">
+      <label class="radio inline">
+        <%= radio_button_tag 'how', :dropoff %>Drop Off
+      </label>
+      <label class="radio inline">
+       <%= radio_button_tag 'how', :pickup %>Pick Up
+      </label>
     </div>
   </div>
 

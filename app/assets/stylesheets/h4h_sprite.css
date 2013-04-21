@@ -70,6 +70,8 @@
 	width: 23px;
 	height: 23px;
 	background-position:  -42px -79px;
+	margin: 3px;
+	float: left;
 }
 
 .h4sprite.add {

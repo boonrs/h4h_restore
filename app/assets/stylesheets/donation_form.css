@@ -1,0 +1,27 @@
+#date {
+	float: left;
+}
+.line {
+	width:940px;
+	border-top: 2px solid rgb(216, 216, 216);
+	margin: 0px 0 20px 0;
+}
+.form-horizontal .control-label {
+	width: 95px;
+	text-align: left;
+}
+.form-horizontal .controls {
+	margin-left: 100px;
+}
+
+.printer, .trash, .save, .email {
+	float: left;
+	margin: 5px;
+}
+.options {
+	float: right;
+	margin-top: 26px;
+}
+.header {
+	float:left;
+}
