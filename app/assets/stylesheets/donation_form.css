@@ -14,7 +14,7 @@
 	margin-left: 100px;
 }
 
-.printer, .trash, .save, .email {
+.printer, .trash, .save, .email, .edit {
 	float: left;
 	margin: 5px;
 }
