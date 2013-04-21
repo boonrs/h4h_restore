@@ -13,11 +13,11 @@
 
 <% @donations.each do |donation| %>
   <tr>
-    <td><%= :date %></td>
-    <td><%= :donor_name %><span style="float:right" class="h4sprite profile"></span></td>
+    <td><%= donation.donated_on %></td>
+    <td><%= donation.donor.name %><span style="float:right" class="h4sprite profile"></span></td>
     <td><%= :coordinator %></td>
     <td><%= donation.poundage %></td>
-    <td><%= :value %></td>
+    <td><%= donation.value %></td>
     <td style="width:100px;"><%= link_to edit_donation_path(donation) do %>
             <div class="h4sprite edit"></div>
         <% end %>

@@ -1,5 +1,7 @@
 <h1>Listing donors</h1>
 
+<%= link_to 'New Donor', new_donor_path, class: "btn" %>
+
 <table>
   <tr>
     <th>Name</th>
@@ -10,7 +12,7 @@
     <th>Zipcode</th>
     <th>Phone</th>
     <th>Email</th>
-    <th>Receive newletters</th>
+    <th>Receive newsletters</th>
     <th>Receive email</th>
     <th>Notes</th>
     <th></th>
@@ -28,7 +30,7 @@
     <td><%= donor.zipcode %></td>
     <td><%= donor.phone %></td>
     <td><%= donor.email %></td>
-    <td><%= donor.receive_newletters %></td>
+    <td><%= donor.receive_newsletters %></td>
     <td><%= donor.receive_email %></td>
     <td><%= donor.notes %></td>
     <td><%= link_to 'Show', donor %></td>
@@ -37,7 +39,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Donor', new_donor_path %>

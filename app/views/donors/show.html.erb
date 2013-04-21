@@ -41,8 +41,8 @@
 </p>
 
 <p>
-  <b>Receive newletters:</b>
-  <%= @donor.receive_newletters %>
+  <b>Receive newsletters:</b>
+  <%= @donor.receive_newsletters %>
 </p>
 
 <p>
@@ -55,6 +55,4 @@
   <%= @donor.notes %>
 </p>
 
-
-<%= link_to 'Edit', edit_donor_path(@donor) %> |
-<%= link_to 'Back', donors_path %>
+<%= link_to "Add Donation", new_donation_path(donor: @donor), class: "btn btn-primary" %>

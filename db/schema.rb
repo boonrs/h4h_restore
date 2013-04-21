@@ -11,17 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130421014514) do
+ActiveRecord::Schema.define(:version => 20130421045135) do
 
   create_table "donations", :force => true do |t|
     t.text     "description"
     t.integer  "poundage"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "donor_id"
     t.integer  "coordinator_id"
     t.integer  "value"
     t.date     "donated_on"
+    t.string   "donation_method"
   end
 
   add_index "donations", ["coordinator_id"], :name => "index_donations_on_coordinator_id"
@@ -36,11 +37,11 @@ ActiveRecord::Schema.define(:version => 20130421014514) do
     t.string   "zipcode"
     t.string   "phone"
     t.string   "email"
-    t.boolean  "receive_newletters", :default => false
-    t.boolean  "receive_email",      :default => false
+    t.boolean  "receive_newsletters", :default => false
+    t.boolean  "receive_email",       :default => false
     t.text     "notes"
-    t.datetime "created_at",                            :null => false
-    t.datetime "updated_at",                            :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
   end
 
   create_table "line_items", :force => true do |t|
