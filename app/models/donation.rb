@@ -31,7 +31,7 @@ class Donation < ActiveRecord::Base
 
   def self.donations_by_top(start_on, end_on, top_type, direct, coordinated)
     #Todo use direct and coordinated params
-    top_donors = joins(:donor).select("IfNull(donors.company, donors.name) as name, count(*) as count, sum(poundage) as poundage, sum(value) as value").group("IfNull(donors.company, donors.name)").where(:donated_on => start_on.to_date..end_on.to_date)
+    top_donors = joins(:donor).select("coalesce(donors.company, donors.name) as name, count(*) as count, sum(poundage) as poundage, sum(value) as value").group("coalesce(donors.company, donors.name)").where(:donated_on => start_on.to_date..end_on.to_date)
     case top_type
       when "Frequency"
         top_donors.order("count desc").limit(100)
