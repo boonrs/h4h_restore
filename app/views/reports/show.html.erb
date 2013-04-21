@@ -9,13 +9,14 @@
   </tr>
 
   <% @report.data.each do |row| %>
-  <tr>
-    <% row.each do |cell| %>
-      <td><%= cell %></td>
+  <tr>  
+    <% row.attributes.each_pair do|name, value| %>
+      <td><%= value %></td>
     <% end %>
   </tr>
   <% end %>
 </table>
+
 <% else %>
   No data
 <% end %>

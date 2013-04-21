@@ -23,6 +23,10 @@ class Donation < ActiveRecord::Base
   end
 
   def self.donations_by_poundage
+    select("strftime('%Y', donated_on) as year, count(*), sum(poundage) as poundage").group("strftime('%Y', donated_on)")
   end
 
+def self.units_by_store
+ group(:store).sum(:units)
+end
 end
