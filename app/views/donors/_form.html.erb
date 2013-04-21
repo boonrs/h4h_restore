@@ -4,87 +4,96 @@
       <h2><%= pluralize(@donor.errors.count, "error") %> prohibited this donor from being saved:</h2>
 
       <ul>
-      <% @donor.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @donor.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="control-group">
-    <%= f.label :name, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :name %>
+  <div class="row">
+    <div class="span5">
+      <div class="control-group">
+        <%= f.label :name, class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :name, class: "input-block-level" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :company, class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :company, class: "input-block-level" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :address, class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :address, class: "input-block-level" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :city, class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :city, class: "input-block-level" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :state, class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :state, class: "input-block-level" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :zipcode, class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :zipcode, class: "input-block-level" %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="span5">
+      <div class="control-group">
+        <%= f.label :receive_newsletters, class: "control-label" %>
+        <div class="controls">
+          <%= f.check_box :receive_newsletters, class: "input-block-level" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :receive_email, class: "control-label" %>
+        <div class="controls">
+          <%= f.check_box :receive_email, class: "input-block-level" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :phone, class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :phone, class: "input-block-level" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :email, class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :email, class: "input-block-level" %>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="control-group">
-    <%= f.label :company, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :company %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :address, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :address %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :city, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :city %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :state, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :state %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :zipcode, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :zipcode %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :phone, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :phone %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :email, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_field :email %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :receive_newsletters, class: "control-label" %>
-    <div class="controls">
-      <%= f.check_box :receive_newsletters %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :receive_email, class: "control-label" %>
-    <div class="controls">
-      <%= f.check_box :receive_email %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :notes, class: "control-label" %>
-    <div class="controls">
-      <%= f.text_area :notes %>
+  <div class="row">
+    <div class="control-group span10">
+      <%= f.label :notes, class: "control-label" %>
+      <div class="controls">
+        <%= f.text_area :notes, rows: 6, class: "input-block-level" %>
+      </div>
     </div>
   </div>
 
