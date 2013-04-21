@@ -14,7 +14,15 @@ class Donation < ActiveRecord::Base
     self.donated_on ||= Date.today
   end
 
+  DayResult = Struct.new(:day, :count, :poundage, :value) do
+    def attributes
+      to_h
+    end
+  end
+
   def self.donations_by_day(start_on, end_on)
+    between_date = where(:donated_on => start_on.to_date..end_on.to_date)
+    between_date.group_by{|d| d.donated_on.strftime("%u")}.sort_by(&:first).map{|key,value| DayResult.new(Date::DAYNAMES[key.to_i], value.count, value.map(&:poundage).sum, value.map(&:value).sum)}
   end
 
   def self.donations_by_zip(start_on, end_on)

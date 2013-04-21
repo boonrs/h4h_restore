@@ -34,7 +34,7 @@ module Report
     end
 
     def data
-      Donation.donations_by_day
+      Donation.donations_by_day(@start_on, @end_on)
     end
 
     def params
