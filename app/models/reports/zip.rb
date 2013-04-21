@@ -32,7 +32,7 @@ module Report
     end
 
     def data
-      Donation.donations_by_zip
+      Donation.donations_by_zip(@start_on, @end_on)
     end
 
     def params

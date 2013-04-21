@@ -17,13 +17,15 @@ class Donation < ActiveRecord::Base
   end
 
   def self.donations_by_zip(start_on, end_on)
+    #["Zip Code", "Count of Donations", "Estimated Poundage", "Estimated Value"]
+    joins(:donor).select("donors.zipcode as zipcode, count(*) as count, sum(poundage) as poundage, sum(value) as value").group("donors.zipcode")
   end
 
   def self.donations_by_top(start_on, end_on, top_type, direct, coordinated)
   end
 
   def self.donations_by_poundage
-    select("strftime('%Y', donated_on) as year, count(*), sum(poundage) as poundage").group("strftime('%Y', donated_on)")
+    select("strftime('%Y', donated_on) as year, count(*) as count, sum(poundage) as poundage").group("strftime('%Y', donated_on)")
   end
 
 def self.units_by_store

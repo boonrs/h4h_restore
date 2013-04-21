@@ -1,7 +1,8 @@
 <h1><%= @report.title %></h1>
+<div class="line"></div>
 
 <% unless @report.data.nil? %>
-<table>
+<table class="table table-hover table-bordered">
   <tr>
     <% @report.table_headers.each do |header| %>
       <th><%= header %></th>
