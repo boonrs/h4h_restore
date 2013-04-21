@@ -44,8 +44,14 @@ class Donation < ActiveRecord::Base
       end    
   end
 
+  PoundageResult = Struct.new(:year, :count, :poundage) do
+    def attributes
+      to_h
+    end
+  end
   def self.donations_by_poundage
-    select("strftime('%Y', donated_on) as year, count(*) as count, sum(poundage) as poundage").group("strftime('%Y', donated_on)")
+    #select("strftime('%Y', donated_on) as year, count(*) as count, sum(poundage) as poundage").group("strftime('%Y', donated_on)")
+    all.group_by{|d| d.donated_on.strftime("%Y")}.sort_by(&:first).map{|key, value| PoundageResult.new(key, value.count, value.map(&:poundage).sum)}
   end
 
   def self.units_by_store
