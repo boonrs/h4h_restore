@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Description:</b>
-  <%= @donation.description %>
+  <b>Donor:</b>
+  <%= link_to @donation.donor.name, @donation.donor %>
 </p>
 
 <p>
@@ -10,6 +10,20 @@
   <%= @donation.poundage %>
 </p>
 
+<p>
+  <b>Value:</b>
+  <%= @donation.value %>
+</p>
 
-<%= link_to 'Edit', edit_donation_path(@donation) %> |
-<%= link_to 'Back', donations_path %>
+<p>
+  <b>Method:</b>
+  <%= @donation.donation_method %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @donation.description %>
+</p>
+
+<%= link_to 'Edit', edit_donation_path(@donation), class: "btn btn-primary" %>
+<%= link_to 'Back', donations_path, class: "btn" %>

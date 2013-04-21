@@ -11,17 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130421014514) do
+ActiveRecord::Schema.define(:version => 20130421043903) do
 
   create_table "donations", :force => true do |t|
     t.text     "description"
     t.integer  "poundage"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "donor_id"
     t.integer  "coordinator_id"
     t.integer  "value"
     t.date     "donated_on"
+    t.string   "donation_method"
   end
 
   add_index "donations", ["coordinator_id"], :name => "index_donations_on_coordinator_id"

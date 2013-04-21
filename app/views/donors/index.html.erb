@@ -1,5 +1,7 @@
 <h1>Listing donors</h1>
 
+<%= link_to 'New Donor', new_donor_path, class: "btn" %>
+
 <table>
   <tr>
     <th>Name</th>
@@ -37,7 +39,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Donor', new_donor_path %>

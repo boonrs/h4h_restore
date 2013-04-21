@@ -27,6 +27,7 @@ class DonationsController < ApplicationController
   # GET /donations/new.json
   def new
     @donation = Donation.new
+    @donation.donor_id = params[:donor] if params[:donor].present?
 
     respond_to do |format|
       format.html # new.html.erb

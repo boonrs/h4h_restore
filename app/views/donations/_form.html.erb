@@ -10,17 +10,19 @@
       </ul>
     </div>
   <% end %>
+
+  <%= f.hidden_field :donor_id %>
+
   <div class="control-group">
-    <%= label_tag :donor_name, "Donor", :class => 'control-label' %>
+    <label class="control-label">Donor</label>
     <div class="controls">
-      <%= text_field_tag :donorname %>
+      <label class="control-label"><%= @donation.donor.name %></label>
     </div>
   </div>
   <div class="control-group ">
-    <%= label_tag :date, "Date", :class => 'control-label' %>
+    <%= label_tag :donated_on, "Date", :class => 'control-label' %>
     <div class="controls">
-      <%= text_field_tag :date %>
-      <div class="h4sprite calendar"></div>
+      <%= f.text_field :donated_on, class: "datepicker" %>
     </div>
   </div>
 
@@ -34,14 +36,14 @@
   <div class="control-group">
     <%= label_tag :value, "Est. Value", :class => 'control-label' %>
     <div class="controls">
-      <%= number_field_tag :value %>
+      <%= f.number_field :value %>
     </div>
   </div>
 
   <div class="control-group">
     <%= label_tag :coordinator, "Coordinator", :class => 'control-label' %>
     <div class="controls">
-      <%= text_field_tag :coordinator %>
+      <%= text_field_tag :coordinator, nil, placeholder: "does nothing yet" %>
     </div>
   </div>
 
@@ -49,10 +51,10 @@
     <label class="control-label"></label>
     <div class="controls">
       <label class="radio inline">
-        <%= radio_button_tag 'how', :dropoff %>Drop Off
+        <%= f.radio_button 'donation_method', :dropoff %>Drop Off
       </label>
       <label class="radio inline">
-       <%= radio_button_tag 'how', :pickup %>Pick Up
+       <%= f.radio_button 'donation_method', :pickup %>Pick Up
       </label>
     </div>
   </div>
@@ -65,7 +67,8 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success" %>
+    <%= link_to "Cancel", :back, class: "btn" %>
   </div>
 <% end %>
 
