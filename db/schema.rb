@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420230012) do
+ActiveRecord::Schema.define(:version => 20130421014514) do
 
   create_table "donations", :force => true do |t|
     t.text     "description"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20130420230012) do
     t.datetime "updated_at",     :null => false
     t.integer  "donor_id"
     t.integer  "coordinator_id"
+    t.integer  "value"
+    t.date     "donated_on"
   end
 
   add_index "donations", ["coordinator_id"], :name => "index_donations_on_coordinator_id"
@@ -40,6 +42,17 @@ ActiveRecord::Schema.define(:version => 20130420230012) do
     t.datetime "created_at",                            :null => false
     t.datetime "updated_at",                            :null => false
   end
+
+  create_table "line_items", :force => true do |t|
+    t.string   "name"
+    t.text     "notes"
+    t.integer  "quantity"
+    t.integer  "donation_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "line_items", ["donation_id"], :name => "index_line_items_on_donation_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
