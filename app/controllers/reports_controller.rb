@@ -10,6 +10,7 @@ class ReportsController < ApplicationController
   end
 
   def update
+    puts "******************" + params.inspect
     @report = Report.find(params[:id], params[:report])
 
     respond_to do |format|

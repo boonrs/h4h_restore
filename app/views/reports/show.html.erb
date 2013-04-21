@@ -1,2 +1,22 @@
 <h1><%= @report.title %></h1>
 
+<% unless @report.data.nil? %>
+<table>
+  <tr>
+    <% @report.table_headers.each do |header| %>
+      <th><%= header %></th>
+    <% end %>
+  </tr>
+
+  <% @report.data.each do |row| %>
+  <tr>
+    <% row.each do |cell| %>
+      <td><%= cell %></td>
+    <% end %>
+  </tr>
+  <% end %>
+</table>
+<% else %>
+  No data
+<% end %>
+

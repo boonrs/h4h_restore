@@ -1,36 +1,40 @@
 module Report
-  class Poundage
+  class Zip
     include ActiveModel::Validations
     include ActiveModel::Conversion
     extend ActiveModel::Naming
 
+    attr_accessor :start_on, :end_on
+
     def initialize(args = {})
       @errors = ActiveModel::Errors.new(self)
-      #This report doesn't have parameters, no error checking necessary
+      puts "=---------=----------" + args.inspect
+      @start_on = args[:start_on]
+      @end_on = args[:end_on]
     end
 
     def name
-      "Estimated Poundage by Year"
+      "Donations by Zip Code"
     end
 
     def to_param
-      "poundage"
+      "zip"
     end
 
     def title
-      name + ' as of ' + Date.today.to_s
+      name + ': ' + @start_on + ' - ' + @end_on
     end
 
     def table_headers
-      ["Year", "Count of Donations", "Estimated Poundage"]
+      ["Zip Code", "Count of Donations", "Estimated Poundage", "Estimated Value"]
     end
 
     def data
-
+      
     end
 
     def params
-      false
+      true
     end
   end
 end

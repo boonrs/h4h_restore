@@ -12,7 +12,9 @@
     </div>
   <% end %>  
 
-  <%= render @report.to_param %>
+  <%= fields_for :report do |ff| %>
+    <%= render @report.to_param, :fields => ff %>
+  <% end %>
   
   <%= submit_tag("Run") %>
 

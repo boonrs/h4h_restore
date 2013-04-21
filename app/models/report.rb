@@ -15,6 +15,8 @@
 
 # end
 require "reports/poundage"
+require "reports/zip"
+require "reports/top"
 
 module Report
   def self.all
@@ -22,7 +24,7 @@ module Report
   end
 
   def self.report_keys
-    @report_keys ||= ["Poundage"]
+    @report_keys ||= ["Poundage", "Zip"]
   end
 
   def self.find(class_name, params={})
