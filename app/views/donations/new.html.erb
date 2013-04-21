@@ -1,8 +1,10 @@
 <div class="row">
 	<div class="span9"><h1>Donation Detail</h1></div>
-		<div class="span3">
-			<div class="options">
-			<div class="h4sprite save"></div>
+	<div class="span3">
+		<div class="options">
+			<%= link_to @donation, :title => 'Save', :rel => 'tooltip' do %>
+				<div class="h4sprite save"></div>
+			<% end %>
 			<div class="h4sprite printer"></div>
 			<div class="h4sprite email"></div>
 			<div class="h4sprite trash"></div>
@@ -11,3 +13,8 @@
 </div>
 <div class="line"></div>
 <%= render 'form' %>
+<<<<<<< HEAD
+=======
+
+<%= link_to 'Back', donations_path %>
+>>>>>>> added link with title to save button
