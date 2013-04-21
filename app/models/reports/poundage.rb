@@ -26,7 +26,7 @@ module Report
     end
 
     def data
-
+        Donation.donations_by_poundage
     end
 
     def params

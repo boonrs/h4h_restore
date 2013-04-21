@@ -48,7 +48,7 @@ module Report
     end
 
     def data
-      
+      Donation.donations_by_top
     end
 
     def params

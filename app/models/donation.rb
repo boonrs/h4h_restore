@@ -12,4 +12,17 @@ class Donation < ActiveRecord::Base
     super
     self.donated_on ||= Date.today
   end
+
+  def self.donations_by_day(start_on, end_on)
+  end
+
+  def self.donations_by_zip(start_on, end_on)
+  end
+
+  def self.donations_by_top(start_on, end_on, top_type, direct, coordinated)
+  end
+
+  def self.donations_by_poundage
+  end
+
 end
