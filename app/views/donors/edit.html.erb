@@ -1,3 +1,7 @@
 <h1><%= @donor.display_name %></h1>
 
 <%= render 'form' %>
+
+<h2>Donation History</h2>
+
+<%= render "donations/table", donations: @donor.donations %>
