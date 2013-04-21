@@ -6,6 +6,8 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'devise', '~> 2.2'
 
+gem 'newrelic_rpm'
+
 group :assets do
   gem 'bootstrap-sass', '~> 2.3.1'
   gem 'sass-rails',   '~> 3.2.3'
@@ -14,14 +16,16 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :production do
+group :production, :staging do
   gem 'pg'
+  gem 'unicorn'
 end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.13'
   gem 'sqlite3'
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
 end
 
 group :development do

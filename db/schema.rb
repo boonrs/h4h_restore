@@ -11,14 +11,48 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420195818) do
+ActiveRecord::Schema.define(:version => 20130421014514) do
 
   create_table "donations", :force => true do |t|
     t.text     "description"
     t.integer  "poundage"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "donor_id"
+    t.integer  "coordinator_id"
+    t.integer  "value"
+    t.date     "donated_on"
+  end
+
+  add_index "donations", ["coordinator_id"], :name => "index_donations_on_coordinator_id"
+  add_index "donations", ["donor_id"], :name => "index_donations_on_donor_id"
+
+  create_table "donors", :force => true do |t|
+    t.string   "name"
+    t.string   "company"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "phone"
+    t.string   "email"
+    t.boolean  "receive_newletters", :default => false
+    t.boolean  "receive_email",      :default => false
+    t.text     "notes"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+  end
+
+  create_table "line_items", :force => true do |t|
+    t.string   "name"
+    t.text     "notes"
+    t.integer  "quantity"
+    t.integer  "donation_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  add_index "line_items", ["donation_id"], :name => "index_line_items_on_donation_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

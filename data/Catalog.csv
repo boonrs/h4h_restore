@@ -1,0 +1,168 @@
+Category,Item,Possible Additional Categories
+Appliances,Dishwasher,Kitchen & Bath
+Appliances,Dryer,
+Appliances,Garbage Disposal,Kitchen & Bath
+Appliances,Microwave,Kitchen & Bath
+Appliances,Oven Hood Fan Housing,Kitchen & Bath
+Appliances,Oven Hood Fan Motor,Kitchen & Bath
+Appliances,"Oven, Electric",Kitchen & Bath
+Appliances,"Range, Electric",Kitchen & Bath
+Appliances,Refrigerator,Kitchen & Bath
+Appliances,"Refrigerator, Side-by-Side",Kitchen & Bath
+Appliances,"Stove, Gas",Kitchen & Bath
+Appliances,Washer,
+Appliances,Water Softener,
+Building Materials,Asphalt Patch,Outdoors
+Building Materials,Baseboard,
+Building Materials,Brackets,Hardware
+Building Materials,Cable,
+Building Materials,Casing,Doors & Windows
+Building Materials,Concrete Mix,Outdoors
+Building Materials,Down Spout,Roofing
+Building Materials,Driveway Sealant,Outdoors
+Building Materials,Fix-All,
+Building Materials,Foam Padding,
+Building Materials,Glass Block,Kitchen & Bath
+Building Materials,Gutter Hangers,Roofing
+Building Materials,Gutter Parts,Roofing
+Building Materials,Gutters,Roofing
+Building Materials,Insulation,"Heating, Venting & Cooling"
+Building Materials,Lumber,
+Building Materials,Plywood,
+Building Materials,Pressboard Sheet,
+Building Materials,Rail,
+Building Materials,Screen,Doors & Windows
+Building Materials,Sheetrock,
+Building Materials,Siding Hardware,Outdoors
+Building Materials,Siding Start Straps,Outdoors
+Building Materials,"Siding, Vinyl",Outdoors
+Building Materials,Stair Railing,
+Building Materials,Threaded Rod,
+Building Materials,Trim,
+Building Materials,"Trim, Interior Vinyl",
+Building Materials,"Trim, Wood",
+Building Materials,Visqueen,
+Building Materials,Wire,
+Doors & Windows,Door,
+Doors & Windows,"Door, Accordian",
+Doors & Windows,"Door, Bifold",
+Doors & Windows,"Door, Exterior",
+Doors & Windows,"Door, Interior",
+Doors & Windows,"Door, Screen",
+Doors & Windows,"Door, Storm",
+Doors & Windows,Window Balance,Hardware
+Doors & Windows,"Window, Vinyl",
+Doors & Windows,"Window, Wood",
+Electrical,Electrical Fittings,
+Electrical,Miscellaneous Electrical,
+Electrical,Outlet,
+Electrical,Outlet Cover,
+Electrical,Switch,
+Flooring,Carpet Brackets,
+Flooring,Carpet Pad,
+Flooring,Carpet Tiles,
+Flooring,Ceramic Glue,
+Flooring,Grout Supplies,Kitchen & Bath
+Flooring,Hardwood Floor,
+Flooring,"Tile, Ceramic",Kitchen & Bath
+Flooring,"Tile, Granite",Kitchen & Bath
+Hardware,Anchors,
+Hardware,Caster,
+Hardware,Closet Assembly,
+Hardware,Deadbolt,Doors & Windows
+Hardware,Deadbolt/Lock Set,Doors & Windows
+Hardware,Door Knob,Doors & Windows
+Hardware,Door Stop,Doors & Windows
+Hardware,Hinges,
+Hardware,Miscellaneous Hardware,
+Hardware,Nails,
+"Heating, Venting & Cooling",Ceiling Fan,
+"Heating, Venting & Cooling",Chimney Cap,
+"Heating, Venting & Cooling",Duct,
+"Heating, Venting & Cooling",Furnance Filter,
+"Heating, Venting & Cooling",Heater,
+"Heating, Venting & Cooling","Heater, Base Board",
+Home Decor,Blinds,Doors & Windows
+Home Decor,"Blinds, Bamboo",Doors & Windows
+Home Decor,"Blinds, Vertical",Doors & Windows
+Home Decor,"Blinds, Window",Doors & Windows
+Home Decor,Mirror,Kitchen & Bath
+Home Decor,"Mirror, Vanity",Kitchen & Bath
+Kitchen & Bath,Air Tub,
+Kitchen & Bath,Bathroom Accessories,
+Kitchen & Bath,Cabinet,
+Kitchen & Bath,"Cabinet, Kitchen",
+Kitchen & Bath,Countertop,
+Kitchen & Bath,"Countertop, Marble",
+Kitchen & Bath,"Fan, Bathroom",
+Kitchen & Bath,"Fan, Bathroom",
+Kitchen & Bath,Handicap Grab Bars,
+Kitchen & Bath,Shower Curtain,
+Kitchen & Bath,Shower Curtain Rod,
+Kitchen & Bath,Shower Door,
+Kitchen & Bath,Shower Head,
+Kitchen & Bath,Shower Organizer,
+Kitchen & Bath,Stove Vent Unit,
+Kitchen & Bath,Toilet,
+Kitchen & Bath,Toilet Repair Kit,
+Kitchen & Bath,Toilet Seat,
+Kitchen & Bath,Towel Ring,
+Kitchen & Bath,Towel Rod,
+Lighting,Light,
+Lighting,Light Bulb,
+Lighting,"Light Bulb, Florescent",
+Lighting,"Light Bulb, HID",
+Lighting,"Light Bulb, Vanity",Kitchen & Bath
+Lighting,"Light, Bathroom",Kitchen & Bath
+Lighting,"Light, Chandelier",
+Lighting,"Light, Kitchen",Kitchen & Bath
+Lighting,"Light, Outdoor Wall",
+Lighting,"Light, Porch",
+Lighting,"Light, Recessed",
+Lighting,"Light, Shop",
+Lighting,"Light, Vanity",Kitchen & Bath
+Lighting,Spotlight,
+Miscellaneous,Books,
+Miscellaneous,Miscellaneous,
+Miscellaneous,See attached list,
+Outdoors,Fence Parts,
+Outdoors,Fence Post,
+Outdoors,Fencing,
+Outdoors,Holiday Light Clips,
+Outdoors,Hose Caddy,
+Outdoors,"Lawn Mower, Gas",
+Outdoors,Patio Table,
+Outdoors,Pavers,
+Outdoors,Yard Supplies,
+Paint,Paint,
+Paint,"Paint, Gallon",
+Paint,"Paint, Quart",
+Pipe/Tubing,Conduit Fittings,
+Pipe/Tubing,Miscellaneous Pipe,Plumbing
+Pipe/Tubing,"Pipe, ABS",Plumbing
+Pipe/Tubing,PVC Fittings,Plumbing
+Pipe/Tubing,Tubing,Plumbing
+Pipe/Tubing,"Tubing, Flex",Plumbing
+Pipe/Tubing,Vent Pipe,Plumbing
+Plumbing,"Facuet, Kitchen",Kitchen & Bath
+Plumbing,Faucet,Kitchen & Bath
+Plumbing,"Faucet, Bath",Kitchen & Bath
+Plumbing,Miscellaneous Plumbing,
+Plumbing,Pressure Tank,
+Plumbing,Sink,Kitchen & Bath
+Plumbing,"Sink, Kitchen",Kitchen & Bath
+Plumbing,"Sink, Utility",Kitchen & Bath
+Plumbing,"Tub, Galvanized",
+Plumbing,"Tub, Steel",
+Roofing,Roof Deicers,
+Roofing,Shingles,
+Storage,"Shelf, Closet",
+Storage,"Shelf, Decorative",
+Storage,Shelving,
+Storage,"Shelving, Plastic",
+Tools,Miscellaneous Tools,
+Tools,Saw,
+Tools,"Saw, Hand",
+Tools,"Saw, Hole",
+Tools,Shop Vac,
+Tools,"Tool, Power",

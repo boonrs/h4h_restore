@@ -1,21 +1,36 @@
-<h1>Listing donations</h1>
+<h1>Donations</h1>
+<div class="line"></div>
 
-<table>
+<table class="table table-hover table-bordered">
   <tr>
-    <th>Description</th>
-    <th>Poundage</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Date</th>
+    <th>Donor</th>
+    <th>Coordinator</th>
+    <th>Weight</th>
+    <th>Value</th>
+    <th>Actions</th>
   </tr>
 
 <% @donations.each do |donation| %>
   <tr>
-    <td><%= donation.description %></td>
+    <td><%= :date %></td>
+    <td><%= :donor_name %><span style="float:right" class="h4sprite profile"></span></td>
+    <td><%= :coordinator %></td>
     <td><%= donation.poundage %></td>
-    <td><%= link_to 'Show', donation %></td>
+    <td><%= :value %></td>
+    <td style="width:100px;"><%= link_to edit_donation_path(donation) do %>
+            <div class="h4sprite edit"></div>
+        <% end %>
+        <%= link_to donation do %>
+            <div class="h4sprite printer"></div>
+        <% end %>
+        <%= link_to donation, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <div class="h4sprite trash"></div>
+        <% end %>
+        </td>
+    <!--<td><%= link_to 'Show', donation %></td>
     <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
-    <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
   </tr>
 <% end %>
 </table>
