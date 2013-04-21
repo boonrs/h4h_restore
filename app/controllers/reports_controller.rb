@@ -10,11 +10,10 @@ class ReportsController < ApplicationController
   end
 
   def update
-    puts "******************" + params.inspect
     @report = Report.find(params[:id], params[:report])
 
     respond_to do |format|
-      if @report.errors.blank?
+      if @report.valid?
         session[:report] = @report
         format.html { redirect_to report_path(@report)}
         format.json { head :no_content }
@@ -26,6 +25,7 @@ class ReportsController < ApplicationController
   end
 
   def show
-    @report = session[:report]
+
+    @report = session[:report] || Report.find(params[:id])
   end
 end

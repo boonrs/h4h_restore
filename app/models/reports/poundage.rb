@@ -1,8 +1,8 @@
 module Report
+  require "informal"
+  
   class Poundage
-    include ActiveModel::Validations
-    include ActiveModel::Conversion
-    extend ActiveModel::Naming
+    include Informal::Model
 
     def initialize(args = {})
       @errors = ActiveModel::Errors.new(self)

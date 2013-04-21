@@ -1,22 +1,7 @@
-# class Report
-  
-#   attr_accessor :id, :name, :start_date
-
-#   @report_method
-
-#   def initialize(id, name, method)  
-#     @id = id  
-#     @name = name  
-#   end  
-
-#   def self.all
-#     reports = [Report.new('poundage', 'Donations by Pound', Donation.find_poundage), Report.new('frequency', "")]
-#   end
-
-# end
 require "reports/poundage"
 require "reports/zip"
 require "reports/top"
+require "reports/day"
 
 module Report
   def self.all
@@ -24,7 +9,7 @@ module Report
   end
 
   def self.report_keys
-    @report_keys ||= ["Poundage", "Zip"]
+    @report_keys ||= ["Poundage", "Zip", "Top", "Day"]
   end
 
   def self.find(class_name, params={})

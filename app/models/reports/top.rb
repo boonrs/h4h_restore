@@ -1,19 +1,33 @@
 module Report
-  class Top
-    include ActiveModel::Validations
-    include ActiveModel::Conversion
-    extend ActiveModel::Naming
+  require "informal"
 
-    attr_accessor :start_on, :end_on
+  class Top
+    include Informal::Model
+
+    attr_accessor :start_on, :end_on, :top_type, :donor_direct, :donor_coordinated
+    validates :start_on, presence: true
+    validates :end_on, presence: true
+    validates :top_type, presence: true
+    validate :must_have_at_least_one_donor
+
+    def must_have_at_least_one_donor
+      puts "*******************  " + @donor_direct.to_s
+      puts "*******************  " + @donor_coordinated.to_s
+      if @donor_direct=="0" and @donor_coordinated=="0"
+        errors.add(:base, 'You must select at least one donor type: direct or coordinated.')
+      end
+    end
 
     def initialize(args = {})
       @errors = ActiveModel::Errors.new(self)
-      puts "=---------=----------" + args.inspect
       @start_on = args[:start_on]
       @end_on = args[:end_on]
+      @top_type = args[:top_type]
+      @donor_direct = args[:donor_direct]
+      @donor_coordinated = args[:donor_coordinated]
     end
 
-    def ddl
+    def top_types
       ["Frequency", "Poundage", "Value"]
     end
 
@@ -26,11 +40,11 @@ module Report
     end
 
     def title
-      name + ': ' + @start_on + ' - ' + @end_on
+      name + "(by #{top_type}): " + @start_on + ' - ' + @end_on
     end
 
     def table_headers
-      ["Zip Code", "Count of Donations", "Estimated Poundage", "Estimated Value"]
+      ["Name", "Count of Donations", "Estimated Poundage", "Estimated Value"]
     end
 
     def data

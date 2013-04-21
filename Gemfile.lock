@@ -78,6 +78,8 @@ GEM
     highline (1.6.18)
     hike (1.2.2)
     i18n (0.6.1)
+    informal (0.1.0)
+      activemodel (~> 3.0)
     ipaddress (0.8.0)
     journey (1.0.4)
     jquery-rails (2.2.1)
@@ -205,6 +207,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise (~> 2.2)
   factory_girl_rails
+  informal
   jquery-rails
   librarian-chef
   newrelic_rpm

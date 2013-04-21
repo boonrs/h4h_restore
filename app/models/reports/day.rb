@@ -1,9 +1,11 @@
 module Report
   require "informal"
 
-  class Zip
+  class Day
     include Informal::Model
+    include ActiveModel::Validations
     include ActiveModel::Conversion
+    extend ActiveModel::Naming
 
     attr_accessor :start_on, :end_on
     validates :start_on, presence: true
@@ -16,19 +18,19 @@ module Report
     end
 
     def name
-      "Donations by Zip Code"
+      "Donations by Day"
     end
 
     def to_param
-      "zip"
+      "day"
     end
 
     def title
-      name + ': ' + @start_on + ' - ' + @end_on
+      name + ": " + @start_on + ' - ' + @end_on
     end
 
     def table_headers
-      ["Zip Code", "Count of Donations", "Estimated Poundage", "Estimated Value"]
+      ["Day", "Count of Donations", "Estimated Poundage", "Estimated Value"]
     end
 
     def data

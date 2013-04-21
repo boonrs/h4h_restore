@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'devise', '~> 2.2'
 
 gem 'newrelic_rpm'
+gem 'informal'
 
 group :assets do
   gem 'bootstrap-sass', '~> 2.3.1'
