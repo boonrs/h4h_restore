@@ -1,0 +1,50 @@
+<h1>Add Item</h1>
+
+<%= form_for [@donation, @line_item], html: { class: "form-horizontal" } do |f| %>
+  <% if @line_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@line_item.errors.count, "error") %> prohibited this donation from being saved:</h2>
+
+      <ul>
+      <% @line_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <label class="control-label">Donation by</label>
+    <div class="controls">
+      <label class="control-label"><%= @donation.donor.display_name %></label>
+    </div>
+  </div>
+
+  <div class="control-group ">
+    <%= label_tag :name, "Item Name", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+
+  <div class="control-group ">
+    <%= label_tag :quantity, "Quantity", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :quantity %>
+    </div>
+  </div>
+
+  <div class="control-group ">
+    <%= label_tag :notes, "Notes", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :notes %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-success" %>
+    <%= link_to "Cancel", :back, class: "btn" %>
+  </div>
+
+<% end %>
+

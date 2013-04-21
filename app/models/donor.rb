@@ -9,6 +9,10 @@ class Donor < ActiveRecord::Base
 
   validate :require_name_or_company
 
+  def display_name
+    name.present? ? name : company
+  end
+
   private
 
   def require_name_or_company
