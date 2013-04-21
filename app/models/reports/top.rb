@@ -11,8 +11,6 @@ module Report
     validate :must_have_at_least_one_donor
 
     def must_have_at_least_one_donor
-      puts "*******************  " + @donor_direct.to_s
-      puts "*******************  " + @donor_coordinated.to_s
       if @donor_direct=="0" and @donor_coordinated=="0"
         errors.add(:base, 'You must select at least one donor type: direct or coordinated.')
       end
@@ -40,7 +38,7 @@ module Report
     end
 
     def title
-      name + "(by #{top_type}): " + @start_on + ' - ' + @end_on
+      name + " (by #{top_type}): " + @start_on + ' - ' + @end_on
     end
 
     def table_headers
@@ -48,7 +46,7 @@ module Report
     end
 
     def data
-      Donation.donations_by_top
+      Donation.donations_by_top(@start_on, @end_on, @top_type, @donor_direct, @donor_coordinated)
     end
 
     def params

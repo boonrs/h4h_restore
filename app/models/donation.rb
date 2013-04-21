@@ -17,18 +17,29 @@ class Donation < ActiveRecord::Base
   end
 
   def self.donations_by_zip(start_on, end_on)
-    #["Zip Code", "Count of Donations", "Estimated Poundage", "Estimated Value"]
-    joins(:donor).select("donors.zipcode as zipcode, count(*) as count, sum(poundage) as poundage, sum(value) as value").group("donors.zipcode")
+    joins(:donor).select("donors.zipcode as zipcode, count(*) as count, sum(poundage) as poundage, sum(value) as value").where(:donated_on => start_on.to_date..end_on.to_date).group("donors.zipcode")
   end
 
   def self.donations_by_top(start_on, end_on, top_type, direct, coordinated)
+    #Todo use direct and coordinated params
+    top_donors = joins(:donor).select("IfNull(donors.company, donors.name) as name, count(*) as count, sum(poundage) as poundage, sum(value) as value").group("IfNull(donors.company, donors.name)").where(:donated_on => start_on.to_date..end_on.to_date)
+    case top_type
+      when "Frequency"
+        top_donors.order("count desc").limit(100)
+      when "Poundage"
+        top_donors.order("poundage desc").limit(100)
+      when "Value"
+        top_donors.order("value desc").limit(100)
+      else
+        #throw an error
+      end    
   end
 
   def self.donations_by_poundage
     select("strftime('%Y', donated_on) as year, count(*) as count, sum(poundage) as poundage").group("strftime('%Y', donated_on)")
   end
 
-def self.units_by_store
- group(:store).sum(:units)
-end
+  def self.units_by_store
+   group(:store).sum(:units)
+  end
 end
