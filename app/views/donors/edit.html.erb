@@ -2,6 +2,8 @@
 
 <%= render 'form' %>
 
+<%= link_to "Add Donation", new_donation_path(donor: @donor), class: "btn pull-right" %>
+
 <h2>Donation History</h2>
 
 <%= render "donations/table", donations: @donor.donations %>
