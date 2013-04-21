@@ -12,7 +12,7 @@ namespace :import do
                         zipcode: row["Zip"],
                         phone: row["Phone"],
                         email: row["Email"],
-                        receive_newletters: row["Subscribe_Newsletters"] == "Yes",
+                        receive_newsletters: row["Subscribe_Newsletters"] == "Yes",
                         receive_email: row["Subscribe_Email"] == "Yes"
       [id, donor]
     end

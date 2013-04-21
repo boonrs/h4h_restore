@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130421043903) do
+ActiveRecord::Schema.define(:version => 20130421045135) do
 
   create_table "donations", :force => true do |t|
     t.text     "description"
@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(:version => 20130421043903) do
     t.string   "zipcode"
     t.string   "phone"
     t.string   "email"
-    t.boolean  "receive_newletters", :default => false
-    t.boolean  "receive_email",      :default => false
+    t.boolean  "receive_newsletters", :default => false
+    t.boolean  "receive_email",       :default => false
     t.text     "notes"
-    t.datetime "created_at",                            :null => false
-    t.datetime "updated_at",                            :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
   end
 
   create_table "line_items", :force => true do |t|
