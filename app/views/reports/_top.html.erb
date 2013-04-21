@@ -1,7 +1,7 @@
 <%= render 'begin_end_date', :fields => fields %>
 
 <%= fields.select(:top_type, @report.top_types) %>
-
+<br />
 <%= fields.check_box(:donor_direct) %>
 <%= fields.label(:donor_direct, "Direct") %>
 <%= fields.check_box(:donor_coordinated) %>
