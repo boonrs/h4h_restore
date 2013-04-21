@@ -26,4 +26,5 @@ end
 
 group :development do
   gem 'librarian-chef'
+  gem 'better_errors'
 end

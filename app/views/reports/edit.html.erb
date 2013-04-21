@@ -1,0 +1,20 @@
+<h1><%= @report.name %></h1>
+<%= form_tag( {:controller => :reports, :action => :update, :id => @report.to_param}, {:method=>:put}) do %>
+  <% if @report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@report.errors.count, "error") %> prohibited this donation from being saved:</h2>
+
+      <ul>
+      <% @report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>  
+
+  <%= render @report.to_param %>
+  
+  <%= submit_tag("Run") %>
+
+<% end %>
+
