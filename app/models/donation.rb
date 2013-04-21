@@ -5,7 +5,8 @@ class Donation < ActiveRecord::Base
   belongs_to :coordinator, class_name: "Donor"
   has_many :line_items
 
-  validates :poundage, presence: true
+  validates :poundage, numericality: { greater_than_or_equal_to: 0, message: "must be greater than zero" }
+  validates :value, numericality: { greater_than_or_equal_to: 0, message: "must be greater than zero", allow_nil: true }
   validates :donor, presence: true
 
   def initialize(*args)

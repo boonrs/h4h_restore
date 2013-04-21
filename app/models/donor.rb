@@ -10,7 +10,13 @@ class Donor < ActiveRecord::Base
   validate :require_name_or_company
 
   def display_name
-    name.present? ? name : company
+    if name.present? && company.present?
+      "#{name} (#{company})"
+    elsif name.present?
+      name
+    else
+      company
+    end
   end
 
   private
