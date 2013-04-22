@@ -13,7 +13,7 @@
     <td><%=donation.donated_on%></td>
     <td>      
       <%= donation.donor.display_name %>
-      <%= link_to donation.donor do %>
+      <%= link_to edit_donor_path(donation.donor) do %>
         <div data-toggle="tooltip" title="view profile" style="float:right" class="h4sprite profile"></div>
       <% end %>
     </td>

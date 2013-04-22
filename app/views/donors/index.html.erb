@@ -13,7 +13,12 @@
 
 <% @donors.each do |donor| %>
   <tr>
-    <td><%= link_to donor.display_name, edit_donor_path(donor) %></td>
+    <td>
+      <%= donor.display_name %>
+      <%= link_to edit_donor_path(donor) do %>
+        <div data-toggle="tooltip" title="view profile" style="float:right" class="h4sprite profile"></div>
+      <% end %>
+    </td>
     <td><%= donor.state %></td>
     <td><%= donor.zipcode %></td>
     <td><%= donor.phone %></td>
