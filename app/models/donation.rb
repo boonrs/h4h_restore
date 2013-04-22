@@ -1,4 +1,6 @@
 class Donation < ActiveRecord::Base
+  paginates_per 10
+
   attr_accessible :description, :poundage, :donated_on, :donor, :value, :donation_method, :donor_id
 
   belongs_to :donor

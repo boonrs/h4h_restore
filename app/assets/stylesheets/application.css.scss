@@ -40,6 +40,15 @@ h1 {
   padding-bottom: 10px;
 }
 
+.pagination-top {
+  float: right;
+  padding-top: 30px;
+}
+
+.pagination-bottom {
+  float: right;
+}
+
 .restore {
   border: 1px solid $tbl-border;
   color: $tbl-font;

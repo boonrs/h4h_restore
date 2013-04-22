@@ -1,4 +1,7 @@
-<h1>Donors</h1>
+<div style="clear:both;"/>
+<h1 style="float:left;">Donors</h1>
+<div class="pagination-top"><%= paginate @donors %></div>
+<div style="clear:both;"/>
 <div class="line"></div>
 
 <table class="table table-hover table-bordered table-striped restore">
@@ -37,3 +40,5 @@
   </tr>
 <% end %>
 </table>
+<div class="pagination-bottom"><%= paginate @donors %></div>
+

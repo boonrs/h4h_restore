@@ -8,6 +8,7 @@ gem 'devise', '~> 2.2'
 
 gem 'newrelic_rpm'
 gem 'informal'
+gem 'kaminari'
 
 group :assets do
   gem 'bootstrap-sass', '~> 2.3.1'

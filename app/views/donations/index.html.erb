@@ -1,4 +1,9 @@
-<h1>Donations</h1>
+<div style="clear:both;"/>
+<h1 style="float:left;">Donations</h1>
+<div class="pagination-top"><%= paginate @donations %></div>
+<div style="clear:both;"/>
 <div class="line"></div>
 
 <%= render 'table', donations: @donations %>
+
+<div class="pagination-bottom"><%= paginate @donations %></div>

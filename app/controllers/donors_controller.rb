@@ -4,7 +4,7 @@ class DonorsController < ApplicationController
   # GET /donors
   # GET /donors.json
   def index
-    @donors = Donor.all
+    @donors = Donor.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
