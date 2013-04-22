@@ -9,7 +9,7 @@
   <%= f.submit "Add Item", class: "btn" %>
 <% end %>
 
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-bordered table-striped restore">
   <tr>
     <th>Item</th>
     <th>Quantity</th>
@@ -24,10 +24,10 @@
       <td><%= line_item.notes %></td>
       <td style="width:100px;">
         <%= link_to "#" do %>
-          <div class="h4sprite edit"></div>
+          <div data-toggle="tooltip" title="edit" class="h4sprite edit"></div>
         <% end %>
         <%= link_to [@donation, line_item], method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <div class="h4sprite trash"></div>
+          <div data-toggle="tooltip" title="trash" class="h4sprite trash"></div>
         <% end %>
       </td>
     </tr>

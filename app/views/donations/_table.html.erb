@@ -1,4 +1,4 @@
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-bordered table-striped restore">
   <tr>
     <th>Date</th>
     <th>Donor</th>
@@ -10,24 +10,24 @@
 
 <% donations.each do |donation| %>
   <tr>
-    <td><%= link_to donation.donated_on, edit_donation_path(donation) %></td>
-    <td>
+    <td><%=donation.donated_on%></td>
+    <td>      
+      <%= donation.donor.display_name %>
       <%= link_to donation.donor do %>
-        <%= donation.donor.display_name %>
-        <span style="float:right" class="h4sprite profile"></span>
+        <div data-toggle="tooltip" title="view profile" style="float:right" class="h4sprite profile"></div>
       <% end %>
     </td>
     <td><span class="muted">coming soon</span></td>
     <td><%= donation.poundage %></td>
     <td><%= donation.value %></td>
     <td style="width:100px;"><%= link_to edit_donation_path(donation) do %>
-            <div class="h4sprite edit"></div>
+            <div data-toggle="tooltip" title="edit" class="h4sprite edit"></div>
         <% end %>
         <%= link_to donation do %>
-            <div class="h4sprite printer"></div>
+            <div data-toggle="tooltip" title="print" class="h4sprite printer"></div>
         <% end %>
         <%= link_to donation, method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <div class="h4sprite trash"></div>
+          <div data-toggle="tooltip" title="trash" class="h4sprite trash"></div>
         <% end %>
         </td>
     <!--<td><%= link_to 'Show', donation %></td>

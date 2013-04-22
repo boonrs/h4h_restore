@@ -15,37 +15,110 @@
 @import "bootstrap";
 @import "bootstrap-datepicker";
 
+$primary: #355977;
+$highlight: #284A66;
+$secondary: #4fad26;
+$ln-color: #888a8d;
+$hdr-color: #bcbdc0;
+$tbl-alt-color: #f2f3f4;
+$font-color: #3f3f3f;
+$tbl-border: #8a8b8c;
+$tbl-font: #6c6d70;
+
 div.navbar-inner {
     height: 50px;
 }
 
-.navbar {height: 50px}
+.navbar .nav > li {
+  line-height: 25px;
+}
+
+h1 {
+  font-weight: normal;
+  color: $font-color;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.restore {
+  border: 1px solid $tbl-border;
+  color: $tbl-font;
+  font-size: 20px;
+}
+
+.restore th {
+  background-color: $hdr-color !important;
+  color: #231f20;
+}
+
+.restore th, .restore td {
+  border-left: 1px solid $tbl-border;
+  border-bottom: 1px solid $tbl-border;
+}
+
+.restore tr {
+  border-bottom: 1px solid $tbl-border;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {
+  background-color: $tbl-alt-color;
+}
+
+.line {
+  width: 100% !important;
+  border-top: 2px solid $ln-color !important;
+}
+.container {
+  width: 95%;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+  background-color: $highlight;
+    background-image: none !important;
+}
 
 .navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
-    background-color:#284A66;
+    background-color: $highlight;
+}
+
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: $highlight;
+}
+
+.spacer {
+  width: 50px;
 }
 
 .nav {
   height: 50px;
 }
 
-img.brand {
-  padding: 0;
-}
-
-.banner_color{
+.navbar-inner{
   background-image:none !important;
-  background-color:#355977 !important;
-  font-family: Roboto Condensed;
-  font-weight:bold;
+  background-color:$primary !important;
+  font-family: 'Roboto Condensed';
 }
 
 .navbar .nav > li > a {
   padding-top: 15px;
-  font-size: 16px;
+  font-size: 20px;
   color: white !important;
 }
 
 .navbar .nav > li > a:hover{
   color: green !important;
+}
+body,
+input,
+button,
+select,
+textarea,
+.navbar-search .search-query {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url(http://themes.googleusercontent.com/static/fonts/robotocondensed/v7/Zd2E9abXLFGSr9G3YK2MsNxB8OB85xaNTJvVSB9YUjQ.woff) format('woff');
 }

@@ -2,7 +2,7 @@
 
 <%= link_to 'New Donor', new_donor_path, class: "btn" %>
 
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-bordered table-striped restore">
   <tr>
     <th>Name</th>
     <th>Address</th>
@@ -21,13 +21,13 @@
     <td><%= donor.email %></td>
     <td style="width:100px;">
       <%= link_to edit_donor_path(donor) do %>
-        <div class="h4sprite edit"></div>
+        <div data-toggle="tooltip" title="edit"class="h4sprite edit"></div>
       <% end %>
       <%= link_to donor do %>
-        <div class="h4sprite printer"></div>
+        <div data-toggle="tooltip" title="print" class="h4sprite printer"></div>
       <% end %>
       <%= link_to donor, method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <div class="h4sprite trash"></div>
+        <div data-toggle="tooltip" title="trash" class="h4sprite trash"></div>
       <% end %>
     </td>
   </tr>
