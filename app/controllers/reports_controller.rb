@@ -25,7 +25,6 @@ class ReportsController < ApplicationController
   end
 
   def show
-
-    @report = session[:report] || Report.find(params[:id])
+    @report = params[:id] == 'poundage' ? Report.find(params[:id]) : session[:report]
   end
 end
