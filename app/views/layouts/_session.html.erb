@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   Signed in as <%= current_user.email %> |
   <%= link_to "Sign out", destroy_user_session_path, data: { method: :delete } %>
-<% else %>
-  <%= link_to "Sign in", new_user_session_path %>
+<% elsif params[:controller] != 'users' and params[:action] != 'new' %>
+  <%= link_to "Sign in " + params[:action], new_user_session_path %>
 <% end %>
