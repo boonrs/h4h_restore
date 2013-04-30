@@ -28,7 +28,7 @@ class Donation < ActiveRecord::Base
   end
 
   def self.donations_by_zip(start_on, end_on)
-    joins(:donor).select("donors.zipcode as zipcode, count(*) as count, sum(poundage) as poundage, sum(value) as value").where(:donated_on => start_on.to_date..end_on.to_date).group("donors.zipcode")
+    joins(:donor).select("donors.zipcode as zipcode, count(*) as count, sum(poundage) as poundage, sum(value) as value").where(:donated_on => start_on.to_date..end_on.to_date).group("donors.zipcode").order("zipcode ASC")
   end
 
   def self.donations_by_top(start_on, end_on, top_type, direct, coordinated)
